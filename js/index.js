@@ -1,3 +1,4 @@
+// foreach starting
 function forEach(array, callback) {
     for (let i = 0; i < array.length; i++) {
       callback(array[i], i, array);
@@ -8,7 +9,9 @@ function forEach(array, callback) {
 forEach(numbers, function(value) {
     console.log(value);
   });
+  // foreach END
 
+  // map starting
   function map(array, callback) {
   const mapArray = [];
 
@@ -19,13 +22,14 @@ forEach(numbers, function(value) {
   return mapArray;
 }
 
-
 const secondArray = map(numbers, function(number) {
   return number+1;
 });
 
 console.log(secondArray); 
+// map END
 
+// myFilter starting
 function myFilter(array, callback) {
     const result = [];
   
@@ -38,13 +42,14 @@ function myFilter(array, callback) {
     return result;
   }
 
-
 const evenNumbers = myFilter(numbers, function(number) {
   return number % 2 === 0;
 });
 
 console.log(evenNumbers); 
+  // myFilter END
 
+  // every starting
 function every(array, callback) {
     for (let i = 0; i < array.length; i++) {
       if (!callback(array[i], i, array)) {
@@ -53,7 +58,9 @@ function every(array, callback) {
     }
     return true;
   }
+  // every END
 
+// indexOf starting
   function indexOf(array, searchElement) {
     for (let i = 0; i < array.length; i++) {
       if (array[i] === searchElement) {
@@ -62,14 +69,21 @@ function every(array, callback) {
     }
     return -1;
   }
-  function lastIndexOf(array, searchElement, lastIndex = array.length - 1) {
-    for (let i = lastIndex; i >= 0; i--) {
+  // indexOf end
+
+
+  // lastIndexOd starting
+  function lastIndexOf(array, searchElement, lastIndx = array.length - 1) {
+    for (let i = fromIndex; i >= 0; i--) {
       if (array[i] === searchElement) {
         return i;
       }
     }
     return -1;
   }
+  // lastIndexOd end
+
+  // findIndex STARTING
 function findIndex(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i], i, array)) {
@@ -78,6 +92,7 @@ function findIndex(array, callback) {
   }
   return -1;
 }
+  // findIndex END
     
   
   
